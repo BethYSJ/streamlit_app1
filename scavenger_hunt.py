@@ -36,7 +36,7 @@ pois = pd.DataFrame({
     'name': ['Wuhan International Plaza', 'Huanan Seafood Market', 'Hankou Railway Station', 'Wuhan CDC'],
     'lat':  [30.584,   30.6195, 30.618, 30.612],
     'lon':  [114.271,  114.2577, 114.250, 114.265],
-    'is_source': [False, True, False, False],
+    'is_source': [False, True, False, False]
 })
 
 # build map
