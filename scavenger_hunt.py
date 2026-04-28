@@ -43,8 +43,25 @@ pois = pd.DataFrame({
 
 m = folium.Map(location = [30.61, 114.28],
                zoom_start = 13,
-               tiles = cartodbpositon'
+               tiles = 'cartodbpositron'
               )
 HeatMap(cases[['lat', 'lon']].values.to.list(), raduis = 12, blur =15).add_to(m)
+
+for _, poi in pois.iterrows():
+    if poi['is_source'] and show_source:
+        color = 'red'
+        label = f"TRUE SOURCE: {poi['name']}"
+    else:
+        color = 'black'
+        label = poi['name']
+
+    folium.Marker(
+        location=[poi['lat'], poi['lon']],
+        popup=label,
+        tooltip=label,
+        icon=folium.Icon(color=color, icon='question-sign'),
+    ).add_to(m)
+  
+ st_folium(m, width = 900, height = 550)
 
                      
