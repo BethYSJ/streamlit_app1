@@ -17,7 +17,7 @@ cluster_pct = st.sidebar.slider("Percentage of cases near source", 10, 90, 70)
 show_source = st.sidebar.checkbox("Reveal true source?")
 
 #make synth data 
-market_lat, market_long = 30.6195, 114.2577
+market_lat, market_lon = 30.6195, 114.2577
 
 cluster_count = int(total_cases * cluster_pct/100)
 noise_count = total_cases - cluster_count
