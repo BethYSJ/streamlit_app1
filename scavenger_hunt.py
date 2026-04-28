@@ -1,6 +1,6 @@
 #import packages
 import streamlit as st
-import pandads as pd
+import pandas as pd
 import folium
 from folium.plugins import HeatMap
 import numpy as np
