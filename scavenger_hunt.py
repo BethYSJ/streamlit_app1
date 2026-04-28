@@ -26,7 +26,7 @@ cluster_lats = np.random.normal(market_lat, 0.005, cluster_count)
 cluster_lons = np.random.normal(market_lon, 0.005, cluster_count)
 
 noise_lats = np.random.uniform(30.5, 30.7, noise_count)
-noise_lons = np.random.uniform(114.2, 114.4 noise_count)
+noise_lons = np.random.uniform(114.2, 114.4, noise_count)
 
 cases = pd.DataFrame({
   'lat': np.concate([cluster_lats, noise_lats]),
