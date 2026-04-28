@@ -29,8 +29,8 @@ noise_lats = np.random.uniform(30.5, 30.7, noise_count)
 noise_lons = np.random.uniform(114.2, 114.4, noise_count)
 
 cases = pd.DataFrame({
-  'lat': np.concate([cluster_lats, noise_lats]),
-  'lon': np.concate([cluster_lons, noise_lons])})
+  'lat': np.concatenate([cluster_lats, noise_lats]),
+  'lon': np.concatenate([cluster_lons, noise_lons])})
 
 pois = pd.DataFrame({
     'name': ['Wuhan International Plaza', 'Huanan Seafood Market', 'Hankou Railway Station', 'Wuhan CDC'],
@@ -45,7 +45,7 @@ m = folium.Map(location = [30.61, 114.28],
                zoom_start = 13,
                tiles = 'cartodbpositron'
               )
-HeatMap(cases[['lat', 'lon']].values.to.list(), raduis = 12, blur =15).add_to(m)
+HeatMap(cases[['lat', 'lon']].values.tolist(), radius = 12, blur =15).add_to(m)
 
 for _, poi in pois.iterrows():
     if poi['is_source'] and show_source:
